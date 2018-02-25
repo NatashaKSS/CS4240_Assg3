@@ -2,6 +2,9 @@
 # Unity folders and files
 ###
 [Aa]ssets/AssetStoreTools*
+[Aa]ssets/UnityARKitPlugin*
+[Aa]ssets/BigFurniturePack*
+[Aa]ssets/AssetStoreTools*
 [Bb]uild/
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
