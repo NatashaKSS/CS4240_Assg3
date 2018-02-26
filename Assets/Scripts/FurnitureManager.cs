@@ -10,6 +10,7 @@ using UnityEngine.UI;
  */
 public class FurnitureManager : MonoBehaviour {
 
+    public GameObject Camera;
     public GameObject HitCubeParent;
     public GameObject CurrSelectedFurniture;
 
@@ -18,6 +19,7 @@ public class FurnitureManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ResetButtons();
+        SetButtonAs(Buttons[0], true); // Default furniture
 	}
 
     public void ResetButtons() {
@@ -53,9 +55,19 @@ public class FurnitureManager : MonoBehaviour {
     //=================================================
 
     public void GenerateFurniture() {
+        // Place furniture on a spot on the plane
         GameObject newFurniture = Instantiate(CurrSelectedFurniture);
-        newFurniture.transform.SetPositionAndRotation(HitCubeParent.transform.position, Quaternion.AngleAxis(-90.0f, Vector3.right));
-        // newFurniture.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f); // HitCubeParent's scale
+        newFurniture.transform.SetPositionAndRotation(HitCubeParent.transform.position, newFurniture.transform.rotation);
+
+        // Make the furniture face the user
+        Vector3 targetLookAtPos = new Vector3(
+            Camera.transform.position.x,
+            newFurniture.transform.position.y,
+            Camera.transform.position.z
+        ); 
+        newFurniture.transform.LookAt(targetLookAtPos);
+        newFurniture.transform.Rotate(Vector3.right, -90.0f);
+        newFurniture.transform.Rotate(Vector3.forward, 180.0f);
     }
 
 }
