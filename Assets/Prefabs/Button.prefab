@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222112656890814462}
   - component: {fileID: 114476642208554688}
   - component: {fileID: 114463165859974890}
+  - component: {fileID: 114314444017611110}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MonoBehaviour:
   m_Text: 'Bed
 
 '
+--- !u!114 &114314444017611110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353698526188984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab05c3394f7a047e79456ec0dcd29667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FurnitureManager: {fileID: 0}
+  furn: {fileID: 0}
 --- !u!114 &114463165859974890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +114,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.61764705, g: 0.7943205, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
