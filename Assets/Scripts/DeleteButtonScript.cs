@@ -18,7 +18,7 @@ public class DeleteButtonScript : MonoBehaviour {
     }
 
     public void DeleteThisFurniture() {
-        Destroy(thisFurniture, 0.5f);
+        Destroy(thisFurniture, 0.3f);
     }
 
 }
